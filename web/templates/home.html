@@ -8,12 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TyuehDesign</title>
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/My0IkVQ.jpg">
-
+    `
     <!-- header_stylesheet -->
     {% include 'header_stylesheet.html' %}
 </head>
-
-
 <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
 <div class="site-wrap">
     <div class="site-mobile-menu">
@@ -24,11 +22,14 @@
         </div>
         <div class="site-mobile-menu-body">
             <ul class="site-nav-wrap">
-                <li class="active"><a href="">Home</a></li>
-                <li class="has-children"><span class="arrow-collapse collapsed" data-toggle="collapse"
-                                               data-target="#collapseItem0"></span>
-                    <a href="">Gallery</a>
-                    <ul class="collapse" id="collapseItem0">
+                <li class=""><a href="#">Home</a></li>
+                <li class="has-children">
+                    <span class="arrow-collapse" data-target="#collapseItem0">
+{#                         TODO: the icon interactive #}
+                        <i class="fas fa-angle-down"></i>
+                    </span>
+                    <a href="">Project</a>
+                    <ul id="collapseItem0" class="collapse">
                         <li><a href="">LOGO</a></li>
                         <li><a href="">Banner</a></li>
                         <li><a href="">Package</a></li>
@@ -49,10 +50,6 @@
                 </li>
                 <li>
                     <a href="" class="pl-0 pr-3"><span
-                            class="fab fa-pinterest"></span></a>
-                </li>
-                <li>
-                    <a href="" class="pl-0 pr-3"><span
                             class="fab fa-behance"></span></a>
                 </li>
             </ul>
@@ -62,13 +59,13 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-6 col-xl-2 aos-init aos-animate" data-aos="fade-down">
-                    <h1 class="mb-0"><a href=""
-                                        class="text-white h2 mb-0">TyuehDesign</a></h1>
+                    <img src="https://i.imgur.com/BCxpf1p.png" class="mb-0" style="height: 32px"><a href=""
+                                        class="text-white h2 mb-0"></a></img>
                 </div>
                 <div class="col-10 col-md-8 d-none d-xl-block aos-init aos-animate" data-aos="fade-down">
                     <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-                        <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                            <li class="active"><a href="">Home</a>
+                        <ul class="site-menu mx-auto d-none d-lg-block">
+                            <li><a href="">Home</a>
                             </li>
                             <li class="has-children">
                                 <a href="">Project</a>
@@ -85,7 +82,7 @@
                 </div>
                 <div class="col-6 col-xl-2 text-right aos-init aos-animate" data-aos="fade-down">
                     <div class="d-none d-xl-inline-block">
-                        <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
+                        <ul class="site-menu ml-auto list-unstyled d-flex text-right mb-0"
                             data-class="social">
                             <li>
                                 <a href="" class="pl-0 pr-3">
@@ -98,18 +95,18 @@
                             </li>
                             <li>
                                 <a href="" class="pl-0 pr-3"><span
-                                        class="fab fa-pinterest"></span></a>
-                            </li>
-                            <li>
-                                <a href="" class="pl-0 pr-3"><span
                                         class="fab fa-behance"></span></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a
-                            href=""
-                            class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
-                    </div>
+                    <ul class="nav-link site-menu-toggle js-menu-toggle text-black"
+                        style="position: relative; top: 3px;">
+                        <a class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" data-widget="control-sidebar"
+                           data-slide="true" href="#"
+                           role="button">
+                            <i class="fas fa-th-large"></i>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -266,69 +263,33 @@
                     <img src="https://i.imgur.com/Qm2RPlA.jpg" alt="Image" class="img-fluid">
                 </div>
             </div>
-
-        </div>
-    </div>
-    <div class="footer py-4">
-        <div style="font-size:10px" class="container-sm text-left">
-            <p>
-                Copyright © 2023 All rights reserved by Tyueh
-            </p>
         </div>
     </div>
     <div class="back-to-top">
-        <a href="#" class="back-to-top-fixed">
-            <i class="fas fa-arrow-circle-up fa-2x"></i>
+        <a href="/" class="back-to-top-fixed">
+            <img src="https://i.imgur.com/vwV1JDo.png"/>
         </a>
     </div>
+    <div class="footer" style="background-color:#425832">
+        <div style="color: #f4f5f9" class="container-sm text-center">
+            <div class="site-menu ml-auto list-unstyled flex" style="font-size: 33px">
+                <a href="" class="pl-3 pr-3" style="color: #f4f5f9">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="pl-3 pr-3" style="color: #f4f5f9">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="pl-3 pr-3" style="color: #f4f5f9">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+            <p style="font-size:10px">
+                Copyright © 2023 All rights reserved by Top yueh
+            </p>
+        </div>
+    </div>
 </div>
+
+{% include 'required_scripts.html' %}
 </body>
-
-<script src={% static "plugins/jquery-3.3.1.min.js" %}></script>
-<script src={% static "plugins/jquery-migrate-3.0.1.min.js" %}></script>
-<script src={% static "plugins/jquery-ui.js" %}></script>
-<script src={% static "plugins/popper.min.js" %}></script>
-<script src={% static "plugins/bootstrap.min.js" %}></script>
-<script src={% static "plugins/owl.carousel.min.js" %}></script>
-<script src={% static "plugins/jquery.stellar.min.js" %}></script>
-<script src={% static "plugins/jquery.countdown.min.js" %}></script>
-<script src={% static "plugins/jquery.magnific-popup.min.js" %}></script>
-<script src={% static "plugins/bootstrap-datepicker.min.js" %}></script>
-<script src={% static "plugins/swiper.min.js" %}></script>
-<script src={% static "plugins/aos.js" %}></script>
-<script src={% static "plugins/picturefill.min.js" %}></script>
-<script src={% static "plugins/lightgallery-all.min.js" %}></script>
-<script src={% static "plugins/jquery.mousewheel.min.js" %}></script>
-<script src={% static "plugins/main.js" %}></script>
-<script>
-    $(document).ready(function () {
-        $('#lightgallery').lightGallery();
-    });
-</script>
-
-<script>
-    // 當文件加載完畢時執行以下代碼
-    document.addEventListener('DOMContentLoaded', function () {
-        // 當滾動條滾動時觸發以下函數
-        window.onscroll = function () {
-            // 取得當前滾動條位置
-            var currentScrollPos = window.pageYOffset;
-            // 如果滾動條位置超過 200px，顯示 back-to-top 按鈕，否則隱藏按鈕
-            if (currentScrollPos > 200) {
-                document.querySelector('.back-to-top-fixed').style.display = 'block';
-            } else {
-                document.querySelector('.back-to-top-fixed').style.display = 'none';
-            }
-        };
-
-        // 當按下 back-to-top-fixed 按鈕時觸發以下函數
-        document.querySelector('.back-to-top-fixed').addEventListener('click', function (e) {
-            // 取消預設行為
-            e.preventDefault();
-            // 回到頁面頂部
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-    });
-</script>
-
 </html>

@@ -1,0 +1,49 @@
+{% load static %}
+
+<script src={% static "plugins/jquery-3.3.1.min.js" %}></script>
+<script src={% static "plugins/jquery-migrate-3.0.1.min.js" %}></script>
+<script src={% static "plugins/jquery-ui.js" %}></script>
+<script src={% static "plugins/jquery.stellar.min.js" %}></script>
+<script src={% static "plugins/jquery.countdown.min.js" %}></script>
+<script src={% static "plugins/jquery.magnific-popup.min.js" %}></script>
+<script src={% static "plugins/jquery.mousewheel.min.js" %}></script>
+<script src={% static "plugins/popper.min.js" %}></script>
+<script src={% static "plugins/bootstrap.min.js" %}></script>
+<script src={% static "plugins/bootstrap-datepicker.min.js" %}></script>
+<script src={% static "plugins/aos.js" %}></script>
+<script src={% static "plugins/lightgallery-all.min.js" %}></script>
+<script src={% static "plugins/swiper.min.js" %}></script>
+<script src={% static "plugins/s.js" %}></script>
+<script src={% static "plugins/owl.carousel.min.js" %}></script>
+<script src={% static "plugins/picturefill.min.js" %}></script>
+<script src={% static "plugins/main.js" %}></script>
+<script>
+    $(document).ready(function () {
+        $('#lightgallery').lightGallery();
+    });
+</script>
+
+<script>
+    // 當文件加載完畢時執行以下代碼
+    document.addEventListener('DOMContentLoaded', function () {
+        // 當滾動條滾動時觸發以下函數
+        window.onscroll = function () {
+            // 取得當前滾動條位置
+            var currentScrollPos = window.pageYOffset;
+            // 如果滾動條位置超過 200px，顯示 back-to-top 按鈕，否則隱藏按鈕
+            if (currentScrollPos > 200) {
+                document.querySelector('.back-to-top-fixed').style.display = 'block';
+            } else {
+                document.querySelector('.back-to-top-fixed').style.display = 'none';
+            }
+        };
+
+        // 當按下 back-to-top-fixed 按鈕時觸發以下函數
+        document.querySelector('.back-to-top-fixed').addEventListener('click', function (e) {
+            // 取消預設行為
+            e.preventDefault();
+            // 回到頁面頂部
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    });
+</script>
