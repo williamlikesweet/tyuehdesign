@@ -28,16 +28,15 @@ a {
     position: fixed;
     margin: 0 0 15px 0;
     bottom: 22px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 33px;
-    height: 33px;
+    right: 22px;
+    /*right: 50%;*/
+    /*transform: translateX(50%);*/
     z-index: 2000;
 }
 
 .back-to-top-fixed > img {
-    width: 33px;
-    height: 33px;
+    width: 60px;
+    height: 60px;
 }
 
 
@@ -49,15 +48,13 @@ a {
         margin: 0 0 15px 0;
         bottom: 22px;
         right: 22px;
-        width: 33px;
-        height: 33px;
         z-index: 2000;
 
     }
 
     .back-to-top-fixed > img {
-        width: 33px;
-        height: 33px;
+        width: 60px;
+        height: 60px;
     }
 
     /*.back-to-top-fixed:hover {*/
